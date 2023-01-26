@@ -27,15 +27,11 @@ SELECT first_name, last_name, address, address2 FROM staff
 INNER JOIN address
 USING (address_id);
 
-SELECT name FROM language;
-
 #Task 5: get films titles where the film language is either English or italian, and whose titles starts with letter "M" , sorted by title descending.
 SELECT title, name FROM film
 	INNER JOIN language
 	USING (language_id)
 WHERE (language_id = "English" AND language_id = "Italian") OR title LIKE "M%";
-
-SELECT * FROM payment;
 
 #Task 6: Display the total amount rung up by each staff member in August of 2005.
 SELECT first_name, sum(amount) FROM payment
